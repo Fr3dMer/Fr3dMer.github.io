@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<div id="container">
+<div class="font">
+  <div id ="header">
+  
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    {% feed_meta %}
+    {% seo %}
+
+    {% include navigation.html %}
+    
+  </div>
+
+
+
+  <div id="body">
+ 
+    <div class ="padding"> 
+
+    <div class = "container"> 	{{ content }} </div>
+    </div>
+
+ 
+  </div> 
+
+
+
+  <div id = "footer">
+    
+      <p>Temp placeholder (github links + RSS feed to go here) and a bit about copyright</p>
+      <p><a href="mercerfrederick@gmail.com">mercerfrederick@gmail.com</a></p>
+    
+  </div>
+
+
+</div>
+</div>
+
+</html>
