@@ -1,8 +1,7 @@
-- name:    completed things   
+- name:    portfolio   
   link: /
 - name:    blog   
   link: /blog.html
-- name:    something else   
-  link: /staff.html
 - name:    about   
   link: /about.html
+
