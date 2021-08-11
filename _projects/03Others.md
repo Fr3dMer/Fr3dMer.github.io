@@ -3,7 +3,7 @@ author: Freddie
 name: Other things I have been working on
 image_link: /assets/images/gamelife.jpeg
 title: Other things I have been working on
-blurb: I show how I sent comands to an IKEA Trådfri gateway over CoAP(Constrained Application Protocol) to control a Trådfri lightbulb
+blurb: 
 ---
 Diffrent projects:
 
