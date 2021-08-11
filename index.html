@@ -1,83 +1,39 @@
 ---
-title: Home page
-layout: default
+title: portfolio
 ---
+<h1>Portfolio</h1>
 
 
-<!DOCTYPE html>
 
-<html>
-  <head>
-  </head>
-  <body>
-    <h1>{{"Completed things" }}</h1>
-    
 <div class = "pic_holder">
 
-<!--
-Big tile (600,400)
--->
 
- <a href="blog.html">
+  {% for item in site.projects %}
+    
+     
+
+
+ <a href="{{item.url}}">
  <div class="large-flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-      <img src="/assets/images/main_alarm.jpeg" alt="Picture of GUI" style="width:600px;height:400px;">
+      <img src="{{item.image_link}}" alt="Picture of project" style="width:600px;height:400px;">
     </div>
     <div class="flip-card-back">
     
-	<h1>{{"Controlling a weireless lightbulb using a homemade GUI on a Rasberry Pi touchscreen"}}</h1>
+	<h1>{{item.title}}</h1>
 	<br>
-	<p> I show how I sent comands to an IKEA Trådfri gateway over CoAP(Constrained Application Protocol) to control a Trådfri lightbulb</p> 
+	<p>{{item.blurb}}</p> 
     
     </div>    
   </div>
 </div> 
 </a>
 
-<!--
-Mini tiles (300,200)
--->
+    
+  {% endfor %}
 
-
- <a href="blog.html">
- <div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src="/assets/images/website.jpg" alt="This is a picture" style="width:300px;height:200px;">
-    </div>
-    <div class="flip-card-back">
-      
-      <h1>Web projects</h1>
-      <br>
-      <p> I show how I used jekyll to make this beautiful site from scratch</p>
-    
-    </div>
-  </div>
-</div> 
-</a>
-
- <a href="blog.html">
- <div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src="/assets/images/pricegraph.jpeg" alt="Graph of propert price changes in Leeds" style="width:300px;height:200px;">
-    </div>
-    <div class="flip-card-back">
-    
-    
-      <h1>Other things</h1>
-      <p> I show off pretty graphs and animations made by tinkering around </p>
-    
-    
-    
-    </div>
-  </div>
-</div> 
-</a>
 
 
 
 </div>
-  </body>
-</html>

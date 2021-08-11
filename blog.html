@@ -2,15 +2,19 @@
 title: Blog of things
 ---
 
-<h1> Latest Posts of things </h1>
 
-<ul>
+
+
+<h1> Latest projects </h1>
+
+
+
  {% for post in site.posts %}
-	<li>
-	<h2><a href="{{ post.url }}"> {{ post.title }} </a></h2>
-	{{ post.excerpt }}
-	</li>
- {% endfor %}
-</ul>
+  <div class="posts">
+  	<div class="smallpic"> <img src="{{post.image_link}}" alt="*********Blog picture***********" style="width:200px;height:100px;"> </div>
+	<a class="link" href="{{ post.url }}"> {{ post.title }}
+	</a>
+  </div>	
 
+ {% endfor %}
 
