@@ -63,10 +63,6 @@
   	display: inline-block;
 }
 
-a:hover {
-  background-color: white;
-  color: lightgrey;
-}
 
 .container {
 	padding-left: 50px;
@@ -140,7 +136,7 @@ a:hover {
 }
 
 a:hover {
-  color: #6cf;
+  color: #3e6b82;
 }
 
 .footerline {
@@ -180,7 +176,8 @@ a:hover {
 
 
 .posts {
-	text-align:left;
+	display:block;
+	min-width:600px;
 }
 
 .smallpic {
@@ -190,9 +187,6 @@ a:hover {
   	padding: 15px 15px;
   	display: inline-block; 
   	vertical-align: top;
-
-  	
-
 }
 
 .link {
@@ -202,7 +196,6 @@ a:hover {
 	vertical-align: top;
 	padding: 15px 15px;
 	font-size: 18px;
-	
 }
 
 .blogcontainer {

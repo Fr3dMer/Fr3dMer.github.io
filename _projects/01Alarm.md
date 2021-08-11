@@ -1,0 +1,26 @@
+--- 
+short_name: Freddie
+name: Alarm
+image_link: /assets/images/main_alarm.jpeg
+title: Controlling a weireless lightbulb using a homemade GUI on a Rasberry Pi touchscreen
+blurb: I show how I sent comands to an IKEA Trådfri gateway over CoAP(Constrained Application Protocol) to control a Trådfri lightbulb
+---
+
+*Please note this is a work in progress post*
+
+
+
+
+
+
+I have always struggled getting up in winter, with the dark and cold morning making it imposible to get out of bed. To fix this I decided to buy something like a Philips Wake-Up Light Alarm Clock, however seeing a price of over £100 decided I could make something beter at half that cost. 
+
+For the light source I used an IKEA Trådfri lightbulb paired with a Trådfri gateway. I then used a  a Rasberry Pi 3b to send commands to the gateway via CoAP(Constrained Application Protocol) using the library libcoap (https://github.com/obgm/libcoap)
+
+
+
+
+
+> This is a blockquote.
+
+Some of these words *are emphasized*.

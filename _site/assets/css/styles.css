@@ -1,6 +1,6 @@
 #navbar { text-align: right; font-family: Arial, Helvetica, sans-serif; font-size: 16px; width: 82%; display: inline-block; vertical-align: bottom; }
 
-.titlebox { text-align: left; color: black; font-size: 18px; text-decoration: none; display: inline-block; padding-left: 1%; width: 15%; height: 100%; display: inline-block; *display: inline; zoom: 1; vertical-align: top; }
+.titlebox { text-align: left; color: black; font-size: 18px; text-decoration: none; display: inline-block; padding-left: 1%; height: 100%; display: inline-block; *display: inline; zoom: 1; vertical-align: top; }
 
 .nav_container { font-family: Arial, Helvetica, sans-serif; width: 100%; height: 10%; }
 
@@ -14,17 +14,17 @@
 
 .buttonlook { color: black; padding: 15px 15px; text-align: center; text-decoration: none; display: inline-block; }
 
-a:hover { background-color: white; color: lightgrey; }
+.container { padding-left: 50px; padding-right: 50px; padding-bottom: 10%; font-family: Arial, Helvetica, sans-serif; height: 80%; position: relative; text-align: center; }
 
-.container { padding-left: 50px; padding-right: 50px; padding-bottom: 10%; font-family: Arial, Helvetica, sans-serif; height: 80%; position: relative; }
+.pageheader { text-align: left; }
 
 #container { min-height: 60%; position: relative; opacity: 1; }
 
 #header { background: #red; padding: 10px; }
 
-#body { padding: 0; min-height: 650px; padding-bottom: 8%; /* Height of the footer */ }
+#body { padding: 0; min-height: 650px; padding-bottom: 10%; /* Height of the footer */ }
 
-#footer { position: absolute; bottom: 0; width: 100%; height: 8%; /* Height of the footer */ background-color: white; text-align: center; float: left; }
+#footer { position: absolute; bottom: 0; width: 100%; height: 10%; /* Height of the footer */ background-color: white; text-align: center; float: left; }
 
 .footertext { text-decoration: none; display: inline-block; vertical-align: top; font-size: 15px; width: 49%; }
 
@@ -32,7 +32,7 @@ a:hover { background-color: white; color: lightgrey; }
 
 .footericons { font-size: 25px; color: #467830; }
 
-a:hover { color: #6cf; }
+a:hover { color: #3e6b82; }
 
 .footerline { width: 80%; margin-right: 10%; margin-right: 10%; border-width: 0px; height: 2px; background-color: #467830; }
 
@@ -44,11 +44,13 @@ a:hover { color: #6cf; }
 
 .newposts { vertical-align: top; }
 
-.post { width: 500px; height: 400; }
+.posts { display: block; min-width: 600px; }
 
 .smallpic { width: 200px; height: 100px; color: black; padding: 15px 15px; display: inline-block; vertical-align: top; }
 
 .link { color: black; text-decoration: none; display: inline-block; vertical-align: top; padding: 15px 15px; font-size: 18px; }
+
+.blogcontainer { padding-left: 50px; padding-right: 50px; padding-bottom: 10%; font-family: Arial, Helvetica, sans-serif; height: 80%; position: relative; text-align: left; }
 
 .pic_holder { padding-left: 10%; padding-right: 0%; height: 70%; width: 70%; overflow: hidden; display: inline-block; }
 

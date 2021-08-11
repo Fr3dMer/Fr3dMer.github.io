@@ -9,12 +9,18 @@ title: Blog
 
 <div class="blogcontainer">
 
- {% for post in site.posts %}
+ {% for post in site.projects %}
+ 
+ <a class="link" href="{{ post.url }}"> 
   <div class="posts">
   	<div class="smallpic"> <img src="{{post.image_link}}" alt="*********Blog picture***********" style="width:200px;height:100px;"> </div>
-	<a class="link" href="{{ post.url }}"> {{ post.title }}
-	</a>
-  </div>	
+  	
+  	<p style="width: 60%;display: inline-block;"> {{ post.title }} </p>
+
+	
+
+  </div>
+  </a>  	
 
  {% endfor %}
 

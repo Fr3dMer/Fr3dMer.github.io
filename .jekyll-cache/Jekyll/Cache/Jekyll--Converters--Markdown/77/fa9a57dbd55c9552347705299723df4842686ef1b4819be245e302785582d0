@@ -1,0 +1,12 @@
+I"�<p>I have always struggled getting up in winter, with the dark and cold morning making it imposible to get out of bed. To fix this I decided to buy something like a Philips Wake-Up Light Alarm Clock, however seeing a price of over £100 decided I could make something beter at half that cost.</p>
+
+<p>For the light source I used an IKEA Trådfri lightbulb paired with a Trådfri gateway. I then used a  a Rasberry Pi 3b to send commands to the gateway via CoAP(Constrained Application Protocol) using the library libcoap (https://github.com/obgm/libcoap)</p>
+
+<p><img src="/assets/images/main_alam.jpeg" alt="Alarm GUI screen shot??" /></p>
+
+<blockquote>
+  <p>This is a blockquote.</p>
+</blockquote>
+
+<p>Some of these words <em>are emphasized</em>.</p>
+:ET
