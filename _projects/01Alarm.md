@@ -1,26 +1,13 @@
 --- 
 short_name: Freddie
 name: Alarm
-image_link: /assets/images/main_alarm.jpeg
-title: Controlling a weireless lightbulb using a homemade GUI on a Rasberry Pi touchscreen
-blurb: I show how I sent comands to an IKEA Trådfri gateway over CoAP(Constrained Application Protocol) to control a Trådfri lightbulb
+image_link: /assets/images/main_alarm.png
+title: Sunrise simulator alarm clock
+blurb: A GUI which sends commands to a IKEA Trådfri gateway over CoAP to control a Trådfri lightbulb.
+layout: projects
 ---
 
-*Please note this is a work in progress post*
+After struggling to get up in the dark of winter I decided to buy a Wake-Up Light Alarm Clock to simulate a sunrise, however seeing their high prices set out to make one myself.
 
+I used a IKEA Trådfri lightbulb paired with a Trådfri gateway as a controllable wireless lightsource. Using a Rasberry Pi 3b I send commands to the gateway via CoAP(Constrained Application Protocol) using the library [libcoap](https://github.com/obgm/libcoap "link to libcoap library"). I wrote a multithreaded GUI using the python plug-in PyQt5 to act as a front end for displaying the time and to allow the user to set the simulated sunrise time.
 
-
-
-
-
-I have always struggled getting up in winter, with the dark and cold morning making it imposible to get out of bed. To fix this I decided to buy something like a Philips Wake-Up Light Alarm Clock, however seeing a price of over £100 decided I could make something beter at half that cost. 
-
-For the light source I used an IKEA Trådfri lightbulb paired with a Trådfri gateway. I then used a  a Rasberry Pi 3b to send commands to the gateway via CoAP(Constrained Application Protocol) using the library libcoap (https://github.com/obgm/libcoap)
-
-
-
-
-
-> This is a blockquote.
-
-Some of these words *are emphasized*.

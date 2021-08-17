@@ -13,14 +13,14 @@
 <meta property="og:title" content="Other things I have been working on" />
 <meta name="author" content="Freddie" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Diffrent projects:" />
-<meta property="og:description" content="Diffrent projects:" />
+<meta name="description" content="Conway’s Game of Life" />
+<meta property="og:description" content="Conway’s Game of Life" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-08-11T20:41:05+01:00" />
+<meta property="article:published_time" content="2021-08-17T20:30:30+01:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Other things I have been working on" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","description":"Diffrent projects:","headline":"Other things I have been working on","dateModified":"2021-08-11T20:41:05+01:00","datePublished":"2021-08-11T20:41:05+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"/projects/03Others.html"},"url":"/projects/03Others.html","author":{"@type":"Person","name":"Freddie"},"@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","description":"Conway’s Game of Life","headline":"Other things I have been working on","dateModified":"2021-08-17T20:30:30+01:00","datePublished":"2021-08-17T20:30:30+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"/projects/03Others.html"},"url":"/projects/03Others.html","author":{"@type":"Person","name":"Freddie"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,6 +28,8 @@
 
 <nav>
 
+<script src="https://kit.fontawesome.com/c5bffd00b6.js" crossorigin="anonymous"></script>
+    
 <div class ="nav_container">
 
   <div class ="padding"> </div>
@@ -73,19 +75,28 @@
 
 
   <div id="body">
-   <div class= "mainpadding">
-     <div class = "container"> 	<h1>Other things I have been working on</h1>
-<h2></h2>
+     <div class = "container"> 	<div class="blogcontainer">
+<h1 class="pageheader">Other things I have been working on</h1>
 
 
-<div style="text-align:left;">
-<p>Diffrent projects:</p>
 
-<ol>
-  <li>Dual boot using arch</li>
-  <li>Game of life</li>
-  <li>Graphs (update acounting for inflation)</li>
-</ol>
+  <h4 id="conways-game-of-life">Conway’s Game of Life</h4>
+
+<p>I’ve been playing around with Conway’s Game of Life and trying to make it run on larger and larger grids, while trying to keep each tick at 0.5s.</p>
+
+<p>Right now I’m at a 60x60 grid using CPython. I’ve learn’t alot since writing this code so my next plan is to go through and re-write the inefficient bits while uising a different interpreter.</p>
+
+<h4 id="exploring-property-price-patterns-using-the-price-paid-dataset-from-hm-land-registry">Exploring property price patterns using the <a href="https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads">Price Paid dataset</a> from HM Land Registry</h4>
+
+<p>After looking at flat prices I had a hunch they may follow a positve curve throughout their lifetimes with a dip around the 5 year mark.</p>
+
+<p>I analysed price data from HM Land Registry’s dataset for all transactions since 1995 by writing a python script to filter out all non-flat transactions in my area and then creating a ordered list of transactions based on postcode. I then created a list of unique addresses, which was then used to find all the transactions for each adress. After creating this final dataset I could manipulate it to find that there is indeed a positve curve with a dip.</p>
+
+<p>My next goal is to use R to graph this data and output some nice illustrations of it.</p>
+
+<h4 id="dual-os-on-home-pc">Dual OS on home PC</h4>
+
+<p>On my home PC I use Windows and Arch linux (with GNOME as my desktop environment) on seperate SSD’s, using rEFInd as boot menu to choose between operating systems.</p>
 
 
 </div>
@@ -93,13 +104,13 @@
     
 
  
-    </div> 
-  </div>
+  </div> 
+
 
 
 <div id = "footer">
 
-    <script src="https://kit.fontawesome.com/c5bffd00b6.js" crossorigin="anonymous"></script>
+
     
   <hr class="footerline">   </hr>
   
@@ -108,12 +119,9 @@
       <p>Created by freddie mercer · © 2021</p>
 
   
-  <a class="footericons" href="https://github.com/Neonyellowy">
+  <a class="footericons" href="https://github.com/Fr3dMer">
   <i class="fab fa-github"></i>
   </a>
-  
-  
-  
   </div>
   
   

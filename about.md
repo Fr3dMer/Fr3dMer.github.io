@@ -1,12 +1,14 @@
 ---
-layout: default
+layout: about
 title: About me
+name: Freddie
 ---
-# A bit about me
 
-Hi my name is Freddie. I am someone who likes to tinker with things and figure out how things works mostly through breaking them. 
 
-I am a budding geneticist with an intrest in bioinformatics.
-This website/blog will be my place to chronicle these projects and some of the things I’ve been working on in my free time.
+Hi my name is Freddie. I like to tinker with things and figure out how they work mostly through breaking them. 
 
-I have 2 years practical experience as a medical laboratory technician, performing a range of techniques such as seqeuencing, fragment analysis and RT-qPCR. I also perform basic anlysis of data gained from these assays. I am resposible for many services and soley responsible for running 3 services (BRAF fussion testing, Import of data in BlueFuse data and Sanger sequencing).
+I'm a budding geneticist with an intrest in bioinformatics and the application of algorithms in the analysis of large datasets. I have a degree in Medical Genetics and work in a NHS Genomics Laboratory Hub.
+
+This website/blog will be my place to showcase these projects and some of the things I’ve been working on in my free time.
+
+
