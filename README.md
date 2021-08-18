@@ -7,5 +7,5 @@ Website and theme made by myself using:
 *Font Awesome V6* - https://fontawesome.com/v6.0
 
 ## Link to site:
-https://freddiemercer.github.io/
+https://fr3dmer.github.io/
 
