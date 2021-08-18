@@ -25,7 +25,6 @@ My next goal is to use R to graph this data and output some nice illustrations o
 
  
 
-
 #### Dual OS on home PC
        
 On my home PC I use Windows and Arch linux (with GNOME as my desktop environment) on seperate SSD’s, using rEFInd as boot menu to choose between operating systems.
