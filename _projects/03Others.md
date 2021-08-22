@@ -23,5 +23,6 @@ I analysed price data from HM Land Registry's dataset for all transactions since
 My next goal is to use R to graph this data and output some nice illustrations of it.
 
 #### Dual OS on home PC
-       
+
 On my home PC I use Windows and Arch linux (with GNOME as my desktop environment) on seperate SSD’s, using rEFInd as boot menu to choose between operating systems.
+

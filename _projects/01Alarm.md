@@ -1,13 +1,21 @@
---- 
+---
 short_name: Freddie
 name: Alarm
 image_link: /assets/images/main_alarm.png
 title: Sunrise simulator alarm clock
-blurb: A GUI which sends commands to a IKEA Trådfri gateway over CoAP to control a Trådfri lightbulb.
+blurb: A GUI which sends commands to an IKEA Trådfri gateway over CoAP to control a Trådfri lightbulb.
 layout: projects
 ---
 
-After struggling to get up in the dark of winter I decided to buy a Wake-Up Light Alarm Clock to simulate a sunrise, however seeing their high prices set out to make one myself.
+I find it impossible to wake up early in winter, especially when its dark. After finally getting sick of this and having some free time I set out to make a Sunrise-Simulator. The idea was to simply write a python script which could communicate with a wireless light bulb and have it gradually brighten while changing hue. After getting inspiration from this blog post by [Sandy Macdonald](https://learn.pimoroni.com/tutorial/sandyj/controlling-ikea-tradfri-lights-from-your-pi) I went out and bought an IKEA Trådfri gateway and light bulb. 
 
-I used a IKEA Trådfri lightbulb paired with a Trådfri gateway as a controllable wireless lightsource. Using a Rasberry Pi 3b+ I sent commands to the gateway via CoAP(Constrained Application Protocol) using the library [libcoap](https://github.com/obgm/libcoap). I wrote a multithreaded GUI using the python plug-in PyQt5 to act as a front end for displaying the time and to allow the user to set the simulated sunrise time.
- 
+The plan was to send commands to the Trådfri gateway via its DTLS (Datagram Transport Layer Security) API end point over CoAP (Constrained Application Protocol). I used the library [libcoap](https://github.com/obgm/libcoap) to send commands to the gateway over CoAP and after verifying this works, I wrote a simple python script which would send commands to the gateway to gradually change the hue and brightness of a light bulb. After some trial and error I got a “sunrise” I was happy with. 
+
+Next I wanted to find some way to set the time for when the sunrise would start. At first I added a small function to the sunrise script that would read a text file when it starts up and if the string in the text file == .currentTime() the sunrise method would begin. 
+
+Happy with this result I installed the library [libcoap](https://github.com/obgm/libcoap) on a old Raspberry Pi 3b+ and using SCP transferred the script over.
+
+This worked well for a while, however whenever I needed to change the time that the sunrise would happen I would have to SSH into the RPI to change the text file. I wanted to make this easier for myself. So I bought a touchscreen and set out to make a GUI I could use to see, change and toggle the simulator on/off. I did this through the python plug in [PyQT5](https://riverbankcomputing.com/software/pyqt/intro). Using this I created a multi threaded GUI that could now act as the front end for displaying the time, to allow the user to set the simulated sunrise time and toggle the simulator on/off.
+
+My next goal will be to install apache2 so that I can set these details via an app on my phone. 
+

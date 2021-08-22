@@ -12,14 +12,14 @@
 <meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="Sunrise simulator alarm clock" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="After struggling to get up in the dark of winter I decided to buy a Wake-Up Light Alarm Clock to simulate a sunrise, however seeing their high prices set out to make one myself." />
-<meta property="og:description" content="After struggling to get up in the dark of winter I decided to buy a Wake-Up Light Alarm Clock to simulate a sunrise, however seeing their high prices set out to make one myself." />
+<meta name="description" content="I find it impossible to wake up early in winter, especially when its dark. After finally getting sick of this and having some free time I set out to make a Sunrise-Simulator. The idea was to simply write a python script which could communicate with a wireless light bulb and have it gradually brighten while changing hue. After getting inspiration from this blog post by Sandy Macdonald I went out and bought an IKEA Trådfri gateway and light bulb." />
+<meta property="og:description" content="I find it impossible to wake up early in winter, especially when its dark. After finally getting sick of this and having some free time I set out to make a Sunrise-Simulator. The idea was to simply write a python script which could communicate with a wireless light bulb and have it gradually brighten while changing hue. After getting inspiration from this blog post by Sandy Macdonald I went out and bought an IKEA Trådfri gateway and light bulb." />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-08-17T20:30:30+01:00" />
+<meta property="article:published_time" content="2021-08-22T16:42:31+01:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Sunrise simulator alarm clock" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","description":"After struggling to get up in the dark of winter I decided to buy a Wake-Up Light Alarm Clock to simulate a sunrise, however seeing their high prices set out to make one myself.","headline":"Sunrise simulator alarm clock","dateModified":"2021-08-17T20:30:30+01:00","datePublished":"2021-08-17T20:30:30+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"/projects/01Alarm.html"},"url":"/projects/01Alarm.html","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"Sunrise simulator alarm clock","dateModified":"2021-08-22T16:42:31+01:00","datePublished":"2021-08-22T16:42:31+01:00","description":"I find it impossible to wake up early in winter, especially when its dark. After finally getting sick of this and having some free time I set out to make a Sunrise-Simulator. The idea was to simply write a python script which could communicate with a wireless light bulb and have it gradually brighten while changing hue. After getting inspiration from this blog post by Sandy Macdonald I went out and bought an IKEA Trådfri gateway and light bulb.","mainEntityOfPage":{"@type":"WebPage","@id":"/projects/01Alarm.html"},"url":"/projects/01Alarm.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -79,9 +79,17 @@
 
 
 
-  <p>After struggling to get up in the dark of winter I decided to buy a Wake-Up Light Alarm Clock to simulate a sunrise, however seeing their high prices set out to make one myself.</p>
+  <p>I find it impossible to wake up early in winter, especially when its dark. After finally getting sick of this and having some free time I set out to make a Sunrise-Simulator. The idea was to simply write a python script which could communicate with a wireless light bulb and have it gradually brighten while changing hue. After getting inspiration from this blog post by <a href="https://learn.pimoroni.com/tutorial/sandyj/controlling-ikea-tradfri-lights-from-your-pi">Sandy Macdonald</a> I went out and bought an IKEA Trådfri gateway and light bulb.</p>
 
-<p>I used a IKEA Trådfri lightbulb paired with a Trådfri gateway as a controllable wireless lightsource. Using a Rasberry Pi 3b I send commands to the gateway via CoAP(Constrained Application Protocol) using the library <a href="https://github.com/obgm/libcoap" title="link to libcoap library">libcoap</a>. I wrote a multithreaded GUI using the python plug-in PyQt5 to act as a front end for displaying the time and to allow the user to set the simulated sunrise time.</p>
+<p>The plan was to send commands to the Trådfri gateway via its DTLS (Datagram Transport Layer Security) API end point over CoAP (Constrained Application Protocol). I used the library <a href="https://github.com/obgm/libcoap">libcoap</a> to send commands to the gateway over CoAP and after verifying this works, I wrote a simple python script which would send commands to the gateway to gradually change the hue and brightness of a light bulb. After some trial and error I got a “sunrise” I was happy with.</p>
+
+<p>Next I wanted to find some way to set the time for when the sunrise would start. At first I added a small function to the sunrise script that would read a text file when it starts up and if the string in the text file == .currentTime() the sunrise method would begin.</p>
+
+<p>Happy with this result I installed the library <a href="https://github.com/obgm/libcoap">libcoap</a> on a old Raspberry Pi 3b+ and using SCP transferred the script over.</p>
+
+<p>This worked well for a while, however whenever I needed to change the time that the sunrise would happen I would have to SSH into the RPI to change the text file. I wanted to make this easier for myself. So I bought a touchscreen and set out to make a GUI I could use to see, change and toggle the simulator on/off. I did this through the python plug in <a href="https://riverbankcomputing.com/software/pyqt/intro">PyQT5</a>. Using this I created a multi threaded GUI that could now act as the front end for displaying the time, to allow the user to set the simulated sunrise time and toggle the simulator on/off.</p>
+
+<p>My next goal will be to install apache2 so that I can set these details via an app on my phone.</p>
 
 
 
